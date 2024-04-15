@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PaymentGatewayFactory {
-    private RazorpayPaymentGateway razorpayPaymentGateway ;
-    public PaymentGatewayFactory(RazorpayPaymentGateway razorpayPaymentGateway){
-        this.razorpayPaymentGateway=razorpayPaymentGateway;
+    private StripePaymentGateway stripePaymentGateway ;
+    public PaymentGatewayFactory(StripePaymentGateway stripePaymentGateway){
+        this.stripePaymentGateway=stripePaymentGateway;
     }
     public PaymentGatewayInterface getBestPaymentGateway(){
 //        int random = new Random().nextInt() ;
@@ -19,6 +19,6 @@ public class PaymentGatewayFactory {
 //            return new RazorpayPaymentGateway();
 //        }
 //        return new StripePaymentGateway();
-        return razorpayPaymentGateway;
+        return stripePaymentGateway;
     }
 }

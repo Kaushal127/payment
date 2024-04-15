@@ -38,7 +38,8 @@ public class PaymentService {
         Payment payment = new Payment();
         payment.setPaymentLink(paymentLink);
         payment.setOrderId(orderId);
-        payment.setPaymentGateway(PaymentGateway.RAZORPAY);
+      //  payment.setPaymentGateway(PaymentGateway.RAZORPAY);
+        payment.setPaymentGateway(PaymentGateway.STRIPE);
         payment.setPaymentStatus(PaymentStatus.PENDING);
         payment.setAmount(amount);
 
